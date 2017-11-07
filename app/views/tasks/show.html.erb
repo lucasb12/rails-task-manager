@@ -1,0 +1,14 @@
+<h1><%= @task.title %></h1>
+
+<p>
+  The description of this task is: <%= @task.details %>
+</p>
+
+ <li>
+  <%= link_to "Delete", task_path(@task), method: :delete,
+  data: { confirm: "Are you sure?" } %>
+ </li>
+
+<li> <%= link_to "Edit", edit_task_path(@task)%></li>
+
+<li> <%= link_to "Index", tasks_path(@task)%></li>
